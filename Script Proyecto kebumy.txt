@@ -1,0 +1,37 @@
+
+
+
+DELETE FROM producto; 
+DELETE FROM usuario; 
+USE proyecto_kebumy;
+INSERT INTO usuario (nombre, email, password, rol, estado, fecha_creacion)
+VALUES
+('Admin Kebumy', 'admin@kebumy.com', 'admin_pass', 'super-admin', 'activo', NOW());
+
+
+INSERT INTO usuario (nombre, email, password, rol, estado, fecha_creacion)
+VALUES
+('Ana Torres', 'ana.t@cliente.com', 'contrasena', 'cliente', 'activo', '2025-01-01 10:00:00'),
+('Carlos López', 'carlos.l@cliente.com', 'contrasena', 'cliente', 'activo', '2025-01-15 11:30:00'),
+('Usuario Inactivo', 'inactivo@cliente.com', 'contrasena', 'cliente', 'inactivo', '2025-02-01 12:00:00');
+
+
+
+INSERT INTO producto (nombre, descripcion, precio, stock, categoria_nombre, imagen_url, estado, fecha_creacion)
+VALUES
+
+('Poleras con Diseños', 'Poleras personalizadas con diseños únicos.', 15990, 8, 'Para ti', 'img/Polera.png', 'activo', NOW()),
+('Polerones Exclusivos', 'Polerones con diseños exclusivos y felpa.', 25000, 3, 'Para ti', 'img/Poleron.png', 'activo', NOW()), 
+('Libretas A5 Classic', 'Libretas de formato A5 de alta calidad.', 5200, 12, 'Para ti', 'img/Agenda.png', 'activo', NOW()),
+('Stickers Vinilo Pack', 'Pack de stickers de vinilo personalizados.', 3800, 50, 'Para ti', 'img/sticker.png', 'activo', NOW()),
+('Fotografías Polaroid', 'Impresiones de fotografías estilo Polaroid.', 2500, 10, 'Para ti', 'img/Polaroid.png', 'activo', NOW()),
+('Calendarios Imantados', 'Calendarios personalizados para empresas.', 5000, 30, 'Para marcas', 'img/miniCalendario.png', 'activo', NOW()),
+('Poleras de Empresa Logo', 'Poleras para tu equipo de trabajo o eventos.', 12000, 40, 'Para marcas', 'img/PolerasMarca.png', 'activo', NOW()),
+('Tarjetas Presentación', 'Tarjetas de presentación de alta calidad.', 6000, 60, 'Para marcas', 'img/tarjetaPresentacion.png', 'activo', NOW()),
+('Etiquetas para Ropa Cuero', 'Etiquetas de tela o cartón para vestuario.', 300, 200, 'Para marcas', 'img/etiquetaCuero.png', 'activo', NOW()),
+('Stickers de Marca Logo', 'Stickers de vinilo para empaques y productos.', 3500, 150, 'Para marcas', 'img/stickerMarca.png', 'activo', NOW()),
+('Mochilas Estampadas', 'Mochilas funcionales con tu logo estampado.', 22000, 18, 'Para marcas', 'img/Mochila.png', 'activo', NOW());
+
+
+SELECT * FROM usuario;
+SELECT * FROM producto;
